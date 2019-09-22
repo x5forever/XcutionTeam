@@ -22,7 +22,7 @@
     self.window.backgroundColor = UIColor.whiteColor;
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
-    [self registerXAPushWithOption:launchOptions];
+    [self registerXBPushWithOption:launchOptions];
     return YES;
 }
 

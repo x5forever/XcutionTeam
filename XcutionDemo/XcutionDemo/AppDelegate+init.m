@@ -6,14 +6,14 @@
 //
 
 #import "AppDelegate+init.h"
-#import <XcutionA/XcutionA.h>
+#import <XcutionB/XcutionB.h>
 #import "JPUSHService.h"
 
 // channelId
 static NSString *kSVChannelId = @"";
 // SVRequest
-static NSString *kXcutionAAppID = @"";
-static NSString *kXcutionAAppKey = @"";
+static NSString *kXcutionBAppID = @"";
+static NSString *kXcutionBAppKey = @"";
 // JPush
 static NSString *kJPushAppKey = @"";
 #ifdef DEBUG
@@ -27,9 +27,9 @@ static BOOL isProduction = TRUE;
 
 @implementation AppDelegate (init)
 
-- (void)registerXAPushWithOption:(NSDictionary *)launchOptions {
+- (void)registerXBPushWithOption:(NSDictionary *)launchOptions {
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    [XcutionA setAppId:kXcutionAAppID appKey:kXcutionAAppKey];
+    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
     [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
@@ -45,7 +45,7 @@ static BOOL isProduction = TRUE;
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    AppLaunchOrientation orientation= [XcutionA getCurrentOrientation];
+    AppLaunchOrientation orientation= [XcutionB getCurrentOrientation];
     switch (orientation) {
         case AppLaunchOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
