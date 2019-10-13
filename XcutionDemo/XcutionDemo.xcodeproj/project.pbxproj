@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54561CBA23379AE600FC0B18 /* XcutionB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54561CB923379AE600FC0B18 /* XcutionB.framework */; };
+		543A71EE2353439100AB887B /* XcutionB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543A71ED2353439100AB887B /* XcutionB.framework */; };
 		54561CBC23379B1700FC0B18 /* XcutionB.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54561CBB23379B1700FC0B18 /* XcutionB.bundle */; };
 		54BF1EF122CB03E70079B498 /* AppDelegate+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF1EF022CB03E70079B498 /* AppDelegate+init.m */; };
 		54C999A722894848002150E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A622894848002150E8 /* AppDelegate.m */; };
@@ -20,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		4569C00E5322B13006F8B46D /* libPods-XcutionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XcutionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54561CB923379AE600FC0B18 /* XcutionB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XcutionB.framework; sourceTree = "<group>"; };
+		543A71ED2353439100AB887B /* XcutionB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XcutionB.framework; sourceTree = "<group>"; };
+		543A71EF235345B200AB887B /* XcutionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcutionDemo.entitlements; sourceTree = "<group>"; };
 		54561CBB23379B1700FC0B18 /* XcutionB.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XcutionB.bundle; sourceTree = "<group>"; };
 		54BF1EEF22CB03E70079B498 /* AppDelegate+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+init.h"; sourceTree = "<group>"; };
 		54BF1EF022CB03E70079B498 /* AppDelegate+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+init.m"; sourceTree = "<group>"; };
@@ -42,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54561CBA23379AE600FC0B18 /* XcutionB.framework in Frameworks */,
+				543A71EE2353439100AB887B /* XcutionB.framework in Frameworks */,
 				A883308DBEDBD9E8298CEA08 /* libPods-XcutionDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,8 +80,9 @@
 		54C999A422894848002150E8 /* XcutionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				543A71EF235345B200AB887B /* XcutionDemo.entitlements */,
+				543A71ED2353439100AB887B /* XcutionB.framework */,
 				54561CBB23379B1700FC0B18 /* XcutionB.bundle */,
-				54561CB923379AE600FC0B18 /* XcutionB.framework */,
 				54C999A522894848002150E8 /* AppDelegate.h */,
 				54C999A622894848002150E8 /* AppDelegate.m */,
 				54C999A822894848002150E8 /* ViewController.h */,
@@ -136,6 +138,11 @@
 				TargetAttributes = {
 					54C999A122894848002150E8 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -353,7 +360,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.svcution.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionDemo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = svcutionDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.svcution.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionDemo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = haitouDev;
 				TARGETED_DEVICE_FAMILY = "1,2";

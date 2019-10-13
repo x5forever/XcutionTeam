@@ -9,18 +9,9 @@
 #import <XcutionB/XcutionB.h>
 #import "JPUSHService.h"
 
-// channelId
-static NSString *kSVChannelId = @"";
-// SVRequest
+// XcutionB
 static NSString *kXcutionBAppID = @"";
 static NSString *kXcutionBAppKey = @"";
-// JPush
-static NSString *kJPushAppKey = @"";
-#ifdef DEBUG
-static BOOL isProduction = FALSE;
-#else
-static BOOL isProduction = TRUE;
-#endif
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
@@ -28,14 +19,16 @@ static BOOL isProduction = TRUE;
 @implementation AppDelegate (init)
 
 - (void)registerXBPushWithOption:(NSDictionary *)launchOptions {
+    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey completionHandler:^(NSString *pushKey) {
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
-                          channel:kSVChannelId
-                 apsForProduction:isProduction
+    [JPUSHService setupWithOption:launchOptions appKey:pushKey
+                          channel:xcuAppNameB()
+                 apsForProduction:TRUE
             advertisingIdentifier:nil];
+    }];
+    
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService registerDeviceToken:deviceToken];
@@ -60,5 +53,10 @@ static BOOL isProduction = TRUE;
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
     }
+}
+static inline NSString * xcuAppNameB() {
+    NSString *appNameKey = @"CFBundleDisplayName";
+    NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
+    return appName.length ? appName : @"";
 }
 @end
