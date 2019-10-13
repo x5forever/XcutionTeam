@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CEF9AC10DE9C96D9DBDD8E3AE38A65BF"
-               BuildableName = "libDMWebView.a"
-               BlueprintName = "DMWebView"
+               BlueprintIdentifier = "E3C5F69CDDDD477B9F78398DC94F9620"
+               BuildableName = "libSVWebView.a"
+               BlueprintName = "SVWebView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
