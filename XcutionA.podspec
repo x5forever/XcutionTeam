@@ -20,5 +20,5 @@ The framework is specifically developed for XcutionTeam.
   s.resources          = "XcutionDemo/XcutionDemo/XcutionA.bundle"
   s.dependency "AFNetworking"
   s.dependency "GTMBase64"
-  s.dependency "DMWebView"
+  s.dependency "SVWebView"
 end
