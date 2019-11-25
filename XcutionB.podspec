@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XcutionB'
-  s.version          = '1.2.0'
+  s.version          = '2.0.0'
   s.summary          = 'XcutionB framework CocoaPods'
 
   s.description      = <<-DESC
@@ -15,7 +15,7 @@ The framework is specifically developed for XcutionTeam.
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
   s.static_framework  =  true
-  s.frameworks = "Foundation", "UIKit", "WebKit"
+  s.frameworks = "Foundation", "UIKit"
   s.vendored_frameworks = "XcutionDemo/XcutionDemo/XcutionB.framework"
   s.resources          = "XcutionDemo/XcutionDemo/XcutionB.bundle"
   s.dependency "AFNetworking"
