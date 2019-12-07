@@ -10,8 +10,8 @@
 #import "JPUSHService.h"
 
 // XcutionA
-static NSString *kXcutionAppID = @"";
-static NSString *kXcutionAppKey = @"";
+static NSString *kXcutionAppID = @"3O44LS38TY3Y6H24";
+static NSString *kXcutionAppKey = @"e4658f45f2244029b908f317ec95f04a";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
