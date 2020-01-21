@@ -340,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
-				DEVELOPMENT_TEAM = PF44HNR78X;
+				DEVELOPMENT_TEAM = RF6ZD87YD6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,9 +353,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionDemo.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = juliApp;
+				PROVISIONING_PROFILE_SPECIFIER = xiaoyouTest;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -380,7 +380,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionDemo.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XcutionA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = haitouDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
