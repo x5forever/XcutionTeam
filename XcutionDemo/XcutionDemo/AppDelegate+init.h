@@ -10,6 +10,6 @@
 
 @interface AppDelegate (init)
 
-- (void)registerXBPushWithOption:(NSDictionary *)launchOptions;
+- (void)registerJPushWithOption:(NSDictionary *)launchOptions;
 
 @end

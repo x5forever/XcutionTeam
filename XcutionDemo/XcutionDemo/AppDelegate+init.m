@@ -9,7 +9,7 @@
 #import <XcutionB/XcutionB.h>
 #import "JPUSHService.h"
 
-// XcutionB V2.2.0
+// XcutionB V2.3.0
 static NSString *kXcutionBAppID = @"";
 static NSString *kXcutionBAppKey = @"";
 
@@ -18,16 +18,17 @@ static NSString *kXcutionBAppKey = @"";
 
 @implementation AppDelegate (init)
 
-- (void)registerXBPushWithOption:(NSDictionary *)launchOptions {
-    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey completionHandler:^(NSString *pushKey) {
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:pushKey
-                          channel:xcuAppNameB()
-                 apsForProduction:TRUE
-            advertisingIdentifier:nil];
-    }];
+- (void)registerJPushWithOption:(NSDictionary *)launchOptions {
+    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey completionHandler:^(XcutionItem item) {
+    if (item.pushKey.length) {
+        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+        [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
+                              channel:xcuAppNameB()
+                     apsForProduction:TRUE
+                advertisingIdentifier:nil];
+    }}];
     
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
