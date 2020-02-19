@@ -14,37 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - GTMBase64 (1.0.1)
+  - AVOSCloud (12.1.1)
   - JCore (2.1.2)
   - JPush (3.2.4):
     - JCore (< 3.0.0, >= 2.0.0)
-  - SVWebView (2.3.1):
-    - WebViewJavascriptBridge (~> 6.0.3)
-  - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - GTMBase64
+  - AVOSCloud
   - JPush
-  - SVWebView
 
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - GTMBase64
+    - AVOSCloud
     - JCore
     - JPush
-    - SVWebView
-    - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  AVOSCloud: 603cd291f44038c57a67fc2b67fe42570bc19cc0
   JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
   JPush: 29466e5f30dbd703f640d70540e411e829cac1fa
-  SVWebView: 01bcccfae351403de30d9a790ff510ea97b3da70
-  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: edb4a31f125468a30cb39ddee7e61c77c8e251a7
+PODFILE CHECKSUM: 43ed4a9e3cd5f3c4722631f58acd0c5b94255c8e
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0.beta.3

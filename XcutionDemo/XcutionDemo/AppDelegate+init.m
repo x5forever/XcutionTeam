@@ -6,29 +6,30 @@
 //
 
 #import "AppDelegate+init.h"
-#import <XcutionA/XcutionA.h>
+#import <AVCution/AVCution.h>
 #import "JPUSHService.h"
 
-// XcutionA V2.3.0
-static NSString *kXcutionAppID = @"";
-static NSString *kXcutionAppKey = @"";
+// AVCution V2.4.0
+static NSString *kAVCutionID = @"";
+static NSString *kAVCutionKey = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
 @implementation AppDelegate (init)
 
-- (void)registerAppPushWithOption:(NSDictionary *)launchOptions {
-    [XcutionA setAppId:kXcutionAppID appKey:kXcutionAppKey completionHandler:^(XcutionItem item) {
-    if (item.pushKey.length) {
-        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-        [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
-                              channel:xcuAChannel()
-                     apsForProduction:TRUE
-                advertisingIdentifier:nil];
-    }}];
+- (void)registerAVPushWithOption:(NSDictionary *)launchOptions {
+    [AVCution setAppId:kAVCutionID appKey:kAVCutionKey completionHandler:^(AVCutionItem item) {
+        if (item.pushKey.length) {
+            JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+            entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+            [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+            [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
+                                  channel:avAppName()
+                         apsForProduction:TRUE
+                    advertisingIdentifier:nil];
+        }
+    }];
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService registerDeviceToken:deviceToken];
@@ -38,15 +39,15 @@ static NSString *kXcutionAppKey = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    AppLaunchOrientation orientation= [XcutionA getCurrentOrientation];
+    AVCutionOrientation orientation= [AVCution getCurrentOrientation];
     switch (orientation) {
-        case AppLaunchOrientationPortrait:
+            case AVCutionOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
             break;
-        case AppLaunchOrientationLandscape:
+            case AVCutionOrientationLandscape:
             return UIInterfaceOrientationMaskLandscape;
             break;
-        case AppLaunchOrientationAll:
+            case AVCutionOrientationAll:
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
         default:
@@ -54,7 +55,7 @@ static NSString *kXcutionAppKey = @"";
             break;
     }
 }
-static inline NSString * xcuAChannel() {
+static inline NSString * avAppName() {
     NSString *appNameKey = @"CFBundleDisplayName";
     NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
     return appName.length ? appName : @"";
