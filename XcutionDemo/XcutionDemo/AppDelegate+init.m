@@ -8,8 +8,7 @@
 #import "JPUSHService.h"
 
 // MKCution V2.4.0
-static NSString *kMKCutionID = @"";
-static NSString *kMKCutionKey = @"";
+static NSString *kMKCutionAPI = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
@@ -17,7 +16,7 @@ static NSString *kMKCutionKey = @"";
 @implementation AppDelegate (init)
 
 - (void)registerMKPushWithOption:(NSDictionary *)launchOptions {
-    [MKCution setApi:@"mgvYNlzQ.mock/appInfo" completionHandler:^(MKCutionItem item) {
+    [MKCution setApi:kMKCutionAPI completionHandler:^(MKCutionItem item) {
         if (item.pushKey.length) {
             JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
             entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
