@@ -1,25 +1,23 @@
 //
 //  AppDelegate+init.m
 //
-//  Created by x5 on 2017/11/3.
-//  Copyright © 2017年 Xcution. All rights reserved.
-//
+
 
 #import "AppDelegate+init.h"
-#import <AVCution/AVCution.h>
+#import <MKCution/MKCution.h>
 #import "JPUSHService.h"
 
-// AVCution V2.4.0
-static NSString *kAVCutionID = @"";
-static NSString *kAVCutionKey = @"";
+// MKCution V2.4.0
+static NSString *kMKCutionID = @"";
+static NSString *kMKCutionKey = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
 @implementation AppDelegate (init)
 
-- (void)registerAVPushWithOption:(NSDictionary *)launchOptions {
-    [AVCution setAppId:kAVCutionID appKey:kAVCutionKey completionHandler:^(AVCutionItem item) {
+- (void)registerMKPushWithOption:(NSDictionary *)launchOptions {
+    [MKCution setApi:@"mgvYNlzQ.mock/appInfo" completionHandler:^(MKCutionItem item) {
         if (item.pushKey.length) {
             JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
             entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
@@ -39,15 +37,15 @@ static NSString *kAVCutionKey = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    AVCutionOrientation orientation= [AVCution getCurrentOrientation];
+    MKCutionOrientation orientation= [MKCution getCurrentOrientation];
     switch (orientation) {
-            case AVCutionOrientationPortrait:
+            case MKCutionOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
             break;
-            case AVCutionOrientationLandscape:
+            case MKCutionOrientationLandscape:
             return UIInterfaceOrientationMaskLandscape;
             break;
-            case AVCutionOrientationAll:
+            case MKCutionOrientationAll:
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
         default:

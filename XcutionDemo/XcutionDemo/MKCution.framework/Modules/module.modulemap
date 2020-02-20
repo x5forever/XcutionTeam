@@ -1,0 +1,6 @@
+framework module MKCution {
+  umbrella header "MKCution.h"
+
+  export *
+  module * { export * }
+}
