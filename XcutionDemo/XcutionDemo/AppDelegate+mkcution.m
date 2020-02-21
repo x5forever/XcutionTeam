@@ -1,9 +1,9 @@
 //
-//  AppDelegate+init.m
+//  AppDelegate+mkcution.m
 //
 
 
-#import "AppDelegate+init.h"
+#import "AppDelegate+mkcution.h"
 #import <MKCution/MKCution.h>
 #import "JPUSHService.h"
 
@@ -13,7 +13,7 @@ static NSString *kMKCutionAPI = @"";
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
-@implementation AppDelegate (init)
+@implementation AppDelegate (mkcution)
 
 - (void)registerMKPushWithOption:(NSDictionary *)launchOptions {
     [MKCution setApi:kMKCutionAPI completionHandler:^(MKCutionItem item) {
