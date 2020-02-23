@@ -14,29 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AVOSCloud (12.1.1)
+  - GTMBase64 (1.0.1)
   - JCore (2.1.2)
   - JPush (3.2.4):
     - JCore (< 3.0.0, >= 2.0.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - AVOSCloud
+  - GTMBase64
   - JPush
 
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - AVOSCloud
+    - GTMBase64
     - JCore
     - JPush
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AVOSCloud: 603cd291f44038c57a67fc2b67fe42570bc19cc0
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
   JPush: 29466e5f30dbd703f640d70540e411e829cac1fa
 
-PODFILE CHECKSUM: 43ed4a9e3cd5f3c4722631f58acd0c5b94255c8e
+PODFILE CHECKSUM: fef619db0c8d79222701a0a10921e527b4968aa0
 
 COCOAPODS: 1.9.0.beta.3
