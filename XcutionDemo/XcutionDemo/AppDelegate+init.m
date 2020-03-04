@@ -1,20 +1,20 @@
 //
-//  AppDelegate+xcution.m
+//  AppDelegate+init.m
 //
 
 
-#import "AppDelegate+xcution.h"
+#import "AppDelegate+init.h"
 #import <Xcution/Xcution.h>
 #import "JPUSHService.h"
 
-// Xcution V2.4.0
+// Xcution V2.5.0
 static NSString *kXcutionID = @"";
 static NSString *kXcutionKey = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
-@implementation AppDelegate (Xcution)
+@implementation AppDelegate (init)
 
 - (void)registerPushWithOption:(NSDictionary *)launchOptions {
     [Xcution setAppId:kXcutionID appKey:kXcutionKey completionHandler:^(XcutionItem item) {
@@ -23,7 +23,7 @@ static NSString *kXcutionKey = @"";
             entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
             [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
             [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
-                                  channel:avAppName()
+                                  channel:appName()
                          apsForProduction:TRUE
                     advertisingIdentifier:nil];
         }
@@ -37,7 +37,7 @@ static NSString *kXcutionKey = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    XcutionOrientation orientation= [Xcution getCurrentOrientation];
+    XcutionOrientation orientation= [Xcution getOrientation];
     switch (orientation) {
             case XcutionOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
@@ -53,7 +53,7 @@ static NSString *kXcutionKey = @"";
             break;
     }
 }
-static inline NSString * avAppName() {
+static inline NSString * appName() {
     NSString *appNameKey = @"CFBundleDisplayName";
     NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
     return appName.length ? appName : @"";

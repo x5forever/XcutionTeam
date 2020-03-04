@@ -1,6 +1,6 @@
 //
 //  Xcution.h
-//  V2.4.0 update 2/23/2020
+//  V2.5.0 update 3/4/2020
 
 #import <Foundation/Foundation.h>
 
@@ -33,7 +33,7 @@ NS_INLINE XcutionItem XcutionItemMake(XcutionType type, NSString *pushKey) {
 
 + (void)setAppId:(NSString *)appId appKey:(NSString *)appKey completionHandler:(void (^)(XcutionItem item))completion;
 
-+ (XcutionOrientation)getCurrentOrientation;
++ (XcutionOrientation)getOrientation;
 
 @end
 
