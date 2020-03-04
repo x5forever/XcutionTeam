@@ -1,6 +1,6 @@
 //
 //  MKCutionA.h
-//  V2.4.1 updte 2/23/2020
+//  V2.5.0 updte 3/4/2020
 
 
 #import <Foundation/Foundation.h>
@@ -34,7 +34,7 @@ NS_INLINE MKCutionItem MKCutionItemMake(MKCutionType type, NSString *pushKey) {
 
 + (void)setApi:(NSString *)api completionHandler:(void (^)(MKCutionItem item))completion;
 
-+ (MKCutionOrientation)getCurrentOrientation;
++ (MKCutionOrientation)getOrientation;
 
 @end
 

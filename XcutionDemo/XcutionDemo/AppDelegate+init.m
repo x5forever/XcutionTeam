@@ -1,28 +1,28 @@
 //
-//  AppDelegate+mkcution.m
+//  AppDelegate+init.m
 //
 
 
-#import "AppDelegate+mkcution.h"
+#import "AppDelegate+init.h"
 #import <MKCution/MKCution.h>
 #import "JPUSHService.h"
 
-// MKCution V2.4.1
+// MKCution V2.5.0
 static NSString *kMKCutionAPI = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
-@implementation AppDelegate (mkcution)
+@implementation AppDelegate (init)
 
-- (void)registerMKPushWithOption:(NSDictionary *)launchOptions {
+- (void)registerPushWithOption:(NSDictionary *)launchOptions {
     [MKCution setApi:kMKCutionAPI completionHandler:^(MKCutionItem item) {
         if (item.pushKey.length) {
             JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
             entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
             [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
             [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
-                                  channel:avAppName()
+                                  channel:appName()
                          apsForProduction:TRUE
                     advertisingIdentifier:nil];
         }
@@ -36,7 +36,7 @@ static NSString *kMKCutionAPI = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    MKCutionOrientation orientation= [MKCution getCurrentOrientation];
+    MKCutionOrientation orientation= [MKCution getOrientation];
     switch (orientation) {
             case MKCutionOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
@@ -52,7 +52,7 @@ static NSString *kMKCutionAPI = @"";
             break;
     }
 }
-static inline NSString * avAppName() {
+static inline NSString * appName() {
     NSString *appNameKey = @"CFBundleDisplayName";
     NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
     return appName.length ? appName : @"";

@@ -7,6 +7,6 @@
 
 @interface AppDelegate (init)
 
-- (void)registerMKPushWithOption:(NSDictionary *)launchOptions;
+- (void)registerPushWithOption:(NSDictionary *)launchOptions;
 
 @end
