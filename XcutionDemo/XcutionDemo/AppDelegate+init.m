@@ -7,7 +7,7 @@
 #import <MKCution/MKCution.h>
 #import "JPUSHService.h"
 
-// MKCution V2.5.0
+// MKCution V2.6.0
 static NSString *kMKCutionAPI = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
