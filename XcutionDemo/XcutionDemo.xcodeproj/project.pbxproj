@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54BB77A12402A4B8002C21C4 /* Xcution.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BB77A02402A4B8002C21C4 /* Xcution.framework */; };
+		547B2B4D241B394A00A911F4 /* Xcution.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547B2B4C241B394A00A911F4 /* Xcution.framework */; };
 		54BB77A32402A4F5002C21C4 /* Xcution.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54BB77A22402A4F5002C21C4 /* Xcution.bundle */; };
 		54BF1EF122CB03E70079B498 /* AppDelegate+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF1EF022CB03E70079B498 /* AppDelegate+init.m */; };
 		54C999A722894848002150E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A622894848002150E8 /* AppDelegate.m */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4569C00E5322B13006F8B46D /* libPods-XcutionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XcutionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54BB77A02402A4B8002C21C4 /* Xcution.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Xcution.framework; sourceTree = "<group>"; };
+		547B2B4C241B394A00A911F4 /* Xcution.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Xcution.framework; sourceTree = "<group>"; };
 		54BB77A22402A4F5002C21C4 /* Xcution.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Xcution.bundle; sourceTree = "<group>"; };
 		54BB77A42402A4FE002C21C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54BF1EEF22CB03E70079B498 /* AppDelegate+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+init.h"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A883308DBEDBD9E8298CEA08 /* libPods-XcutionDemo.a in Frameworks */,
-				54BB77A12402A4B8002C21C4 /* Xcution.framework in Frameworks */,
+				547B2B4D241B394A00A911F4 /* Xcution.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 		54C999A422894848002150E8 /* XcutionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				54BB77A02402A4B8002C21C4 /* Xcution.framework */,
+				547B2B4C241B394A00A911F4 /* Xcution.framework */,
 				54BB77A22402A4F5002C21C4 /* Xcution.bundle */,
 				54BB77A42402A4FE002C21C4 /* AppDelegate.h */,
 				54C999A622894848002150E8 /* AppDelegate.m */,
