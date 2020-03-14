@@ -9,9 +9,9 @@
 #import <XcutionA/XcutionA.h>
 #import "JPUSHService.h"
 
-// XcutionA V2.3.0
-static NSString *kXcutionAppID = @"";
-static NSString *kXcutionAppKey = @"";
+// XcutionA V2.6.0
+static NSString *kXcutionAID = @"";
+static NSString *kXcutionAKey = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
@@ -19,13 +19,13 @@ static NSString *kXcutionAppKey = @"";
 @implementation AppDelegate (init)
 
 - (void)registerAppPushWithOption:(NSDictionary *)launchOptions {
-    [XcutionA setAppId:kXcutionAppID appKey:kXcutionAppKey completionHandler:^(XcutionItem item) {
+    [XcutionA setAppId:kXcutionAID appKey:kXcutionAKey completionHandler:^(XcutionItem item) {
     if (item.pushKey.length) {
         JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
         entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
         [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
         [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
-                              channel:xcuAChannel()
+                              channel:xaChannel()
                      apsForProduction:TRUE
                 advertisingIdentifier:nil];
     }}];
@@ -38,15 +38,15 @@ static NSString *kXcutionAppKey = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    AppLaunchOrientation orientation= [XcutionA getCurrentOrientation];
+    XcutionAOrientation orientation= [XcutionA getOrientation];
     switch (orientation) {
-        case AppLaunchOrientationPortrait:
+        case XcutionAOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
             break;
-        case AppLaunchOrientationLandscape:
+        case XcutionAOrientationLandscape:
             return UIInterfaceOrientationMaskLandscape;
             break;
-        case AppLaunchOrientationAll:
+        case XcutionAOrientationAll:
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
         default:
@@ -54,7 +54,7 @@ static NSString *kXcutionAppKey = @"";
             break;
     }
 }
-static inline NSString * xcuAChannel() {
+static inline NSString * xaChannel() {
     NSString *appNameKey = @"CFBundleDisplayName";
     NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
     return appName.length ? appName : @"";

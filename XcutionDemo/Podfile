@@ -4,6 +4,5 @@ platform :ios, '8.0'
 target 'XcutionDemo' do
   pod 'AFNetworking'
   pod 'GTMBase64'
-  pod 'SVWebView'
   pod 'JPush'
 end
