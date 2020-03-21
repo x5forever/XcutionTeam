@@ -1,7 +1,7 @@
 //
 //  XcutionA.h
 //
-//  V2.6.0 update 3/14/2020
+//  V2.7.0 update 3/21/2020
 
 #import <Foundation/Foundation.h>
 

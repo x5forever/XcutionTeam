@@ -9,7 +9,7 @@
 #import <XcutionA/XcutionA.h>
 #import "JPUSHService.h"
 
-// XcutionA V2.6.0
+// XcutionA V2.7.0
 static NSString *kXcutionAID = @"";
 static NSString *kXcutionAKey = @"";
 
