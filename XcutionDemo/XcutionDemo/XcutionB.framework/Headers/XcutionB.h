@@ -1,33 +1,30 @@
 //
 //  XcutionB.h
-//  SVRequestDemo
 //
-//  Created by x5.
-//  Copyright © 2019 x5. All rights reserved.
-//  V2.3.0 update 1/21/2020
+//  V2.7.0 update 3/22/2020
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, AppLaunchOrientation) {
-    AppLaunchOrientationPortrait = 0,
-    AppLaunchOrientationLandscape,
-    AppLaunchOrientationAll
+typedef NS_ENUM(NSInteger, XcutionBOrientation) {
+    XcutionBOrientationPortrait = 0,
+    XcutionBOrientationLandscape,
+    XcutionBOrientationAll
 };
 
-typedef NS_ENUM(NSInteger, AppLaunchType) {
-    AppLaunchTypeDefault = 0,
-    AppLaunchTypeWebView,
-    AppLaunchTypeSafari,
-    AppLaunchTypeSpare
+typedef NS_ENUM(NSInteger, XcutionBType) {
+    XcutionBTypeDefault = 0,
+    XcutionBTypeWebView,
+    XcutionBTypeSafari,
+    XcutionBTypeSpare
 };
 
-typedef struct _XcutionItem{
-    AppLaunchType type;
+typedef struct _XcutionBItem{
+    XcutionBType type;
     __unsafe_unretained NSString *pushKey;
-} XcutionItem;
+} XcutionBItem;
 
-NS_INLINE XcutionItem XcutionItemMake(AppLaunchType type, NSString *pushKey) {
-    XcutionItem item;
+NS_INLINE XcutionBItem XcutionBItemMake(XcutionBType type, NSString *pushKey) {
+    XcutionBItem item;
     item.type = type;
     item.pushKey = pushKey;
     return item;
@@ -35,10 +32,8 @@ NS_INLINE XcutionItem XcutionItemMake(AppLaunchType type, NSString *pushKey) {
 
 @interface XcutionB : NSObject
 
-+ (void)setAppId:(NSString *)appId appKey:(NSString *)appKey __deprecated_msg("Please use 'setAppId:appKey:completionHandler:' instead");
++ (void)setAppId:(NSString *)appId appKey:(NSString *)appKey completionHandler:(void (^)(XcutionBItem item))completion;
 
-+ (void)setAppId:(NSString *)appId appKey:(NSString *)appKey completionHandler:(void (^)(XcutionItem item))completion;
-
-+ (AppLaunchOrientation)getCurrentOrientation;
++ (XcutionBOrientation)getOrientation;
 
 @end

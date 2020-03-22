@@ -1,34 +1,32 @@
 //
 //  AppDelegate+init.m
 //
-//  Created by x5 on 2017/11/3.
-//  Copyright © 2017年 Xcution. All rights reserved.
-//
+
 
 #import "AppDelegate+init.h"
 #import <XcutionB/XcutionB.h>
 #import "JPUSHService.h"
 
-// XcutionB V2.3.0
-static NSString *kXcutionBAppID = @"";
-static NSString *kXcutionBAppKey = @"";
+// XcutionB V2.7.0
+static NSString *kXcutionBID = @"";
+static NSString *kXcutionBKey = @"";
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 @end
 
 @implementation AppDelegate (init)
-
 - (void)registerJPushWithOption:(NSDictionary *)launchOptions {
-    [XcutionB setAppId:kXcutionBAppID appKey:kXcutionBAppKey completionHandler:^(XcutionItem item) {
-    if (item.pushKey.length) {
-        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-        [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
-                              channel:xcuAppNameB()
-                     apsForProduction:TRUE
-                advertisingIdentifier:nil];
-    }}];
+    [XcutionB setAppId:kXcutionBID appKey:kXcutionBKey completionHandler:^(XcutionBItem item) {
+        if (item.pushKey) {
+            JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+            entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+            [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+            [JPUSHService setupWithOption:launchOptions appKey:item.pushKey
+                                  channel:nil
+                         apsForProduction:YES
+                    advertisingIdentifier:nil];
+        }
+    }];
     
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -39,25 +37,20 @@ static NSString *kXcutionBAppKey = @"";
     [application cancelAllLocalNotifications];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    AppLaunchOrientation orientation= [XcutionB getCurrentOrientation];
+    XcutionBOrientation orientation= [XcutionB getOrientation];
     switch (orientation) {
-        case AppLaunchOrientationPortrait:
+        case XcutionBOrientationPortrait:
             return UIInterfaceOrientationMaskPortrait;
             break;
-        case AppLaunchOrientationLandscape:
+        case XcutionBOrientationLandscape:
             return UIInterfaceOrientationMaskLandscape;
             break;
-        case AppLaunchOrientationAll:
+        case XcutionBOrientationAll:
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
         default:
             return UIInterfaceOrientationMaskAllButUpsideDown;
             break;
     }
-}
-static inline NSString * xcuAppNameB() {
-    NSString *appNameKey = @"CFBundleDisplayName";
-    NSString *appName = [NSBundle mainBundle].infoDictionary[appNameKey];
-    return appName.length ? appName : @"";
 }
 @end
