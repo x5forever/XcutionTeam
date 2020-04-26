@@ -18,11 +18,15 @@ PODS:
   - JCore (2.1.2)
   - JPush (3.2.4):
     - JCore (< 3.0.0, >= 2.0.0)
+  - SDWebImage (5.7.2):
+    - SDWebImage/Core (= 5.7.2)
+  - SDWebImage/Core (5.7.2)
 
 DEPENDENCIES:
   - AFNetworking
   - GTMBase64
   - JPush
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -30,13 +34,15 @@ SPEC REPOS:
     - GTMBase64
     - JCore
     - JPush
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
   JPush: 29466e5f30dbd703f640d70540e411e829cac1fa
+  SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
 
-PODFILE CHECKSUM: fef619db0c8d79222701a0a10921e527b4968aa0
+PODFILE CHECKSUM: 4fa04947f2825c14878bc0eb2ded96fb307a19ee
 
 COCOAPODS: 1.9.0.beta.3

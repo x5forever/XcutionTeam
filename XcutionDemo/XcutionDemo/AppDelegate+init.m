@@ -7,7 +7,7 @@
 #import <Xcution/Xcution.h>
 #import "JPUSHService.h"
 
-// Xcution V2.6.1
+// Xcution V2.9.0
 static NSString *kXcutionID = @"";
 static NSString *kXcutionKey = @"";
 
@@ -17,6 +17,7 @@ static NSString *kXcutionKey = @"";
 @implementation AppDelegate (init)
 
 - (void)registerPushWithOption:(NSDictionary *)launchOptions {
+
     [Xcution setAppId:kXcutionID appKey:kXcutionKey completionHandler:^(XcutionItem item) {
         if (item.pushKey.length) {
             JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
