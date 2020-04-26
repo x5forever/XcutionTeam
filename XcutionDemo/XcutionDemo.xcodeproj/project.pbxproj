@@ -7,21 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54083371239BD53800DAD431 /* XcutionA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54083370239BD53800DAD431 /* XcutionA.framework */; };
-		543BB1A6233790BA009EEF0A /* XcutionA.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 543BB1A5233790BA009EEF0A /* XcutionA.bundle */; };
 		54BF1EF122CB03E70079B498 /* AppDelegate+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF1EF022CB03E70079B498 /* AppDelegate+init.m */; };
 		54C999A722894848002150E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A622894848002150E8 /* AppDelegate.m */; };
 		54C999AA22894848002150E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A922894848002150E8 /* ViewController.m */; };
 		54C999B222894849002150E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C999B022894849002150E8 /* LaunchScreen.storyboard */; };
 		54C999B522894849002150E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999B422894849002150E8 /* main.m */; };
+		54D5074D245563F50038294A /* XcutionA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D5074C245563F50038294A /* XcutionA.framework */; };
 		54F6418F232CD81600E7608B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F6418E232CD81600E7608B /* Images.xcassets */; };
 		A883308DBEDBD9E8298CEA08 /* libPods-XcutionDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4569C00E5322B13006F8B46D /* libPods-XcutionDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4569C00E5322B13006F8B46D /* libPods-XcutionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XcutionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54083370239BD53800DAD431 /* XcutionA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XcutionA.framework; sourceTree = "<group>"; };
-		543BB1A5233790BA009EEF0A /* XcutionA.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XcutionA.bundle; sourceTree = "<group>"; };
 		54BF1EEF22CB03E70079B498 /* AppDelegate+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+init.h"; sourceTree = "<group>"; };
 		54BF1EF022CB03E70079B498 /* AppDelegate+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+init.m"; sourceTree = "<group>"; };
 		54C999A222894848002150E8 /* XcutionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcutionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +29,7 @@
 		54C999B122894849002150E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54C999B322894849002150E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C999B422894849002150E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		54D5074C245563F50038294A /* XcutionA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XcutionA.framework; sourceTree = "<group>"; };
 		54F6418E232CD81600E7608B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9BC71165DE1E53D34600F2BE /* Pods-XcutionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcutionDemo.release.xcconfig"; path = "Target Support Files/Pods-XcutionDemo/Pods-XcutionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B6D78A3B254D3EC3649F7EF3 /* Pods-XcutionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcutionDemo.debug.xcconfig"; path = "Target Support Files/Pods-XcutionDemo/Pods-XcutionDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A883308DBEDBD9E8298CEA08 /* libPods-XcutionDemo.a in Frameworks */,
-				54083371239BD53800DAD431 /* XcutionA.framework in Frameworks */,
+				54D5074D245563F50038294A /* XcutionA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +77,7 @@
 		54C999A422894848002150E8 /* XcutionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				54083370239BD53800DAD431 /* XcutionA.framework */,
-				543BB1A5233790BA009EEF0A /* XcutionA.bundle */,
+				54D5074C245563F50038294A /* XcutionA.framework */,
 				54C999A522894848002150E8 /* AppDelegate.h */,
 				54C999A622894848002150E8 /* AppDelegate.m */,
 				54C999A822894848002150E8 /* ViewController.h */,
@@ -163,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F6418F232CD81600E7608B /* Images.xcassets in Resources */,
-				543BB1A6233790BA009EEF0A /* XcutionA.bundle in Resources */,
 				54C999B222894849002150E8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
