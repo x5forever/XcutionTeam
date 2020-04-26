@@ -3,6 +3,7 @@ platform :ios, '8.0'
 
 target 'XcutionDemo' do
   pod 'AFNetworking'
+  pod 'SDWebImage'
   pod 'GTMBase64'
   pod 'JPush'
 end
