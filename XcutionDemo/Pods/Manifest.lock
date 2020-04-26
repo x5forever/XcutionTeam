@@ -15,8 +15,8 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - GTMBase64 (1.0.1)
-  - JCore (2.1.2)
-  - JPush (3.2.4):
+  - JCore (2.2.5)
+  - JPush (3.3.2):
     - JCore (< 3.0.0, >= 2.0.0)
   - SDWebImage (5.7.2):
     - SDWebImage/Core (= 5.7.2)
@@ -39,8 +39,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
-  JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
-  JPush: 29466e5f30dbd703f640d70540e411e829cac1fa
+  JCore: d75c0306dc99875d323d23e5a063b3a3ef22335a
+  JPush: 9468c84a3809dc3ac2fc1c89c6d1d6c858a91bf5
   SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
 
 PODFILE CHECKSUM: 4fa04947f2825c14878bc0eb2ded96fb307a19ee
