@@ -12,7 +12,7 @@ The framework is specifically developed for XcutionTeam.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'x5' => 'x5forever@163.com' }
   s.source           = { :git => 'https://github.com/x5forever/XcutionTeam.git', :tag => 'V2.9.6' }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.static_framework  =  true
   s.frameworks = "Foundation", "UIKit"
