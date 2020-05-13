@@ -1,6 +1,6 @@
 //
 //  MKCutionA.h
-//  V2.7.1 updte 3/16/2020
+//  V2.9.2 updte 5/13/2020
 
 
 #import <Foundation/Foundation.h>
@@ -31,8 +31,6 @@ NS_INLINE MKCutionItem MKCutionItemMake(MKCutionType type, NSString *pushKey) {
 }
 
 @interface MKCution : NSObject
-
-+ (void)setApi:(NSString *)api completionHandler:(void (^)(MKCutionItem item))completion __deprecated_msg("Please use 'setApi:keychain:completion:' instead");;
 
 + (void)setApi:(NSString *)api keychain:(NSString *)keychain completion:(void (^)(MKCutionItem item))completion;
 
