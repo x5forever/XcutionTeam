@@ -21,12 +21,16 @@ PODS:
   - SDWebImage (5.7.2):
     - SDWebImage/Core (= 5.7.2)
   - SDWebImage/Core (5.7.2)
+  - SVWebView (2.4.0):
+    - WebViewJavascriptBridge_WebKit (~> 7.0.1)
+  - WebViewJavascriptBridge_WebKit (7.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - GTMBase64
   - JPush
   - SDWebImage
+  - SVWebView
 
 SPEC REPOS:
   trunk:
@@ -35,6 +39,8 @@ SPEC REPOS:
     - JCore
     - JPush
     - SDWebImage
+    - SVWebView
+    - WebViewJavascriptBridge_WebKit
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -42,7 +48,9 @@ SPEC CHECKSUMS:
   JCore: d75c0306dc99875d323d23e5a063b3a3ef22335a
   JPush: 9468c84a3809dc3ac2fc1c89c6d1d6c858a91bf5
   SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
+  SVWebView: ae5fdf8ae02c5e5546d64f12c19fc97d41ad21b0
+  WebViewJavascriptBridge_WebKit: 3fba9150bbdea8258f69db2e5f7c74e191ee94c2
 
-PODFILE CHECKSUM: d94688ea30f4da4f806d6abd1b122b25db180175
+PODFILE CHECKSUM: 035224adfc3413a3a91cc03b3937b2873fa198cb
 
 COCOAPODS: 1.9.1
