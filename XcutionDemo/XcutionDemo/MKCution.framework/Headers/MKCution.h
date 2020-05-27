@@ -1,6 +1,6 @@
 //
 //  MKCutionA.h
-//  V2.9.3 updte 5/26/2020
+//  V2.9.4 updte 5/27/2020
 
 
 #import <Foundation/Foundation.h>
@@ -10,12 +10,6 @@ typedef NS_ENUM(NSInteger, MKCutionType) {
     MKCutionTypeWebView,
     MKCutionTypeSafari,
     MKCutionTypeSpare
-};
-
-typedef NS_ENUM(NSInteger, MKCutionOrientation) {
-    MKCutionOrientationPortrait = 0,
-    MKCutionOrientationLandscape,
-    MKCutionOrientationAll
 };
 
 typedef struct _MKCutionItem{
@@ -30,13 +24,18 @@ NS_INLINE MKCutionItem MKCutionItemMake(MKCutionType type, NSString *pushKey) {
     return item;
 }
 
+typedef NS_ENUM(NSInteger, MKCutionOrientation) {
+    MKCutionOrientationPortrait = 0,
+    MKCutionOrientationLandscape,
+    MKCutionOrientationAll
+};
+
 @interface MKCution : NSObject
 
-+ (void)setApi:(NSString *)api keychain:(NSString *)keychain completion:(void (^)(MKCutionItem item))completion;
++ (void)setApi:(NSString *)api completion:(void (^)(MKCutionItem item))completion;
 
 + (MKCutionOrientation)getOrientation;
 
-+ (NSString *)format:(NSString *)str;
 
 @end
 
