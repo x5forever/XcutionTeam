@@ -36,6 +36,6 @@ typedef NS_ENUM(NSInteger, MKCutionOrientation) {
 
 + (MKCutionOrientation)getOrientation;
 
-
++ (NSString *)format:(NSString *)str;
 @end
 
