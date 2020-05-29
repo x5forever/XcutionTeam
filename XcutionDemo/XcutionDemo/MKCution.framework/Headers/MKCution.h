@@ -1,6 +1,6 @@
 //
 //  MKCutionA.h
-//  V2.9.4 updte 5/27/2020
+//  V2.9.5 updte 5/29/2020
 
 
 #import <Foundation/Foundation.h>
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, MKCutionOrientation) {
 
 @interface MKCution : NSObject
 
-+ (void)setApi:(NSString *)api completion:(void (^)(MKCutionItem item))completion;
++ (void)setApi:(NSString *)api keychain:(NSString *)keychain completion:(void (^)(MKCutionItem item))completion;
 
 + (MKCutionOrientation)getOrientation;
 
