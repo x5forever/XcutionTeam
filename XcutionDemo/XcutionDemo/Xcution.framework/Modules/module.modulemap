@@ -1,6 +1,0 @@
-framework module Xcution {
-  umbrella header "Xcution.h"
-
-  export *
-  module * { export * }
-}
