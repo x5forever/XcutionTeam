@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54769A892498F75800822A66 /* Xcution.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54769A882498F75800822A66 /* Xcution.framework */; };
 		54C999A722894848002150E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A622894848002150E8 /* AppDelegate.m */; };
 		54C999AA22894848002150E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C999A922894848002150E8 /* ViewController.m */; };
 		54C999B222894849002150E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C999B022894849002150E8 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 
 /* Begin PBXFileReference section */
 		4569C00E5322B13006F8B46D /* libPods-XcutionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XcutionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54769A882498F75800822A66 /* Xcution.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Xcution.framework; sourceTree = "<group>"; };
 		54BB77A42402A4FE002C21C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54C999A222894848002150E8 /* XcutionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcutionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C999A622894848002150E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,7 +36,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A883308DBEDBD9E8298CEA08 /* libPods-XcutionDemo.a in Frameworks */,
-				54769A892498F75800822A66 /* Xcution.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +73,6 @@
 			children = (
 				54BB77A42402A4FE002C21C4 /* AppDelegate.h */,
 				54C999A622894848002150E8 /* AppDelegate.m */,
-				54769A882498F75800822A66 /* Xcution.framework */,
 				54C999A822894848002150E8 /* ViewController.h */,
 				54C999A922894848002150E8 /* ViewController.m */,
 				54C999B022894849002150E8 /* LaunchScreen.storyboard */,
